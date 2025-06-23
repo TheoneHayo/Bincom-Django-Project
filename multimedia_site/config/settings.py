@@ -1,3 +1,6 @@
+import dj_database_url
+import os
+
 """
 Django settings for config project.
 
@@ -25,7 +28,7 @@ SECRET_KEY = 'django-insecure-ngtecfl0tlu(u_@#^o3wtjf*c4lq_edgv$cxz%txtd9enq_b15
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -148,3 +151,12 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+# Static files settings for Heroku
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Add Whitenoise Middleware
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+
+# Heroku Database configuration
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
