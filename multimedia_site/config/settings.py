@@ -1,6 +1,3 @@
-import dj_database_url
-import os
-
 """
 Django settings for config project.
 
@@ -157,6 +154,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Add Whitenoise Middleware
 MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
-
-# Heroku Database configuration
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)

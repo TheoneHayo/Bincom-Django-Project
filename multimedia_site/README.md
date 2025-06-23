@@ -15,7 +15,7 @@ I attempted to deploy SnapShelf to **Heroku**. However, I was unable to complete
 
 Instead, I have made the source code and setup instructions available via:
 - [GitHub Repository](https://github.com/TheoneHayo/Bincom-Django-Project)
-- Google Drive folder (contains project files zipped and ready to run)
+- Google Drive folder (contains project files zipped and ready to run "https://drive.google.com/drive/folders/12eAC-EcXGbWFeYiPzZdf-gg2EgniQreD?usp=drive_link")
 
 ---
 
